@@ -71,7 +71,7 @@ MpdAccessory.prototype.setOn = function(on, callback) {
     });
   }
   else {
-    this.client.sendCommand(cmd("stop", []), function(err, msg) {
+    this.client.sendCommand(cmd("pause", []), function(err, msg) {
       if (err) {
         callback(err);
       }
